@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-item">
+        <img src="{{ url_for('static', filename='project1.jpg') }}" alt="Project 1">
+        <div class="project-text">
+            <h3>Chatbot Bank</h3>
+            <p>
+                Sebuah aplikasi chatbot berbasis Flask dan Naïve Bayes yang mampu memberikan informasi produk perbankan
+                secara otomatis. Menggunakan klasifikasi intent untuk memahami pertanyaan pengguna.
+            </p>
+        </div>
+    </div>
+
+    <div class="project-item">
+        <img src="{{ url_for('static', filename='project3.jpg') }}" alt="Project 3">
+        <div class="project-text">
+            <h3>Desain Produk</h3>
+            <p>
+                Desain kemasan dan media promosi menggunakan Adobe Illustrator & Photoshop, 
+                menekankan pada branding yang menarik dan profesional.
+            </p>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
