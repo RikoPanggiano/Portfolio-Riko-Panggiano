@@ -3,13 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Reset default */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background elegan */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #1f1f1f;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        .navbar a {
+            color: #f5c542;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        /* Hero section */
+        .hero {
+            margin-top: 60px;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            border: 6px solid #f5c542;
+            margin-bottom: 25px;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #f5c542;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Section umum */
+        .education, .experience, .skills, .projects {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .education h2, .experience h2, .skills h2, .projects h2 {
+            font-size: 2.2rem;
+            color: #f5c542;
+            margin-bottom: 40px;
+        }
+
+        .education ul, .experience ul, .skill-section ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+
+        /* Skill section */
+        .skill-section {
+            margin-bottom: 40px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .skill-section h3 {
+            font-size: 1.8rem;
+            color: #f5c542;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f5c542;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* Project section */
+        .project-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            flex-wrap: wrap; /* agar responsive */
+        }
+
+        .project-item img {
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+            border: 3px solid #f5c542;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+        }
+
+        .project-text {
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .project-text h3 {
+            font-size: 1.8rem;
+            color: #f5c542;
+            margin-bottom: 10px;
+        }
+
+        .project-text p {
+            font-size: 1.2rem;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .project-text {
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .project-item img {
+                width: 90%;
+                max-width: 350px;
+            }
+
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <a href="/">Home</a>
         <a href="/experience">Experience</a>
-        <a href="/project">Project</a>
+        <a href="/project">Projects</a>
         <a href="/skills">Skills</a>
         <a href="/education">Education</a>
     </nav>
